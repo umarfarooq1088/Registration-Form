@@ -15,3 +15,8 @@ form {
     align-items: center;
     justify-content: center;
 }
+
+#error {
+    display: block;
+    color: red;
+}

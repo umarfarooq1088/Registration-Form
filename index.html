@@ -9,38 +9,42 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+
     <title>Form</title>
 </head>
 
 <body>
-    <div class="forr">
+    <div class="forr container-fluid ">
         <h2>Student Registration Form</h2>
         <p>Fill out the form carefully for registration</p>
-        <form>
+        <form class=" needs-validation" id="newForm" novalidate>
 
             <div class="form-row mt-5">
 
                 <div class="form-group col-md-4">
-                    <label for="inputEmail4">  <h6>Student Name</h6></label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="">
+                    <label for="inputEmail4 validationCustom01">  <h6>Student Name</h6></label>
+                    <input type="text" value="" class="form-control alphaonly" placeholder="" autocomplete="off" id="validationCustom01" value="Mark" required>
+                    <div class="valid-feedback">Loosks good! </div>
                     <p>First Name</p>
                 </div>
                 <div class="form-group col-md-4 mt-3">
                     <label for="inputPassword4"></label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="">
+                    <input type="text" class="form-control alphaonly" placeholder="" autocomplete="off" id="validationCustom03" value="" required>
+                    <div class="valid-feedback"></div>
                     <p>Middle Name</p>
                 </div>
                 <div class="form-group col-md-4 mt-3">
                     <label for="inputPassword4"></label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="">
+                    <input type="text" class="form-control  alphaonly" placeholder="" autocomplete="off" id="validationCustom02" value="" required>
+                    <div class="valid-feedback">
+                    </div>
                     <p>Last Name</p>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-2">
-                    <label for="inputState"><h6>Birth Date</h6></label>
-                    <select id="inputState" class="form-control">
+                    <label for="inputState validationCustom04"><h6>Birth Date</h6></label>
+                    <select id="inputState form-select" class="form-control" id="validationCustom04" required>
           <option selected></option>
           <option value="1">Jan</option>
           <option value="2">Feb</option>
@@ -59,7 +63,7 @@
                 </div>
                 <div class="form-group col-md-2 mt-3">
                     <label for="inputState"></label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" class="form-control" id="validationCustom04" required>
           <option selected></option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -97,7 +101,7 @@
                 </div>
                 <div class="form-group col-md-2 mt-3">
                     <label for="inputState"></label>
-                    <select id="inputState" class="form-control">
+                    <select id="inputState" class="form-control" id="validationCustom04" required>
           <option selected></option>
           <option value="1950">1950</option>
           <option value="1951">1951</option>
@@ -157,8 +161,8 @@
                     <p class="ml-1">Year</p>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputState"><h6>Gender</h6></label>
-                    <select id="inputState" class="form-control">
+                    <label for="inputState validationCustom04"><h6>Gender</h6></label>
+                    <select id="inputState" class="form-control" id="validationCustom04" required>
           <option selected>Please Select</option>
           <option>Male</option>
           <option>Female</option>
@@ -166,21 +170,23 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputAddress"><h5>Address</h5></label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="">
+                <label for="inputAddress validationTooltip01"><h5>Address</h5></label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="" id="validationTooltip01" required>
                 <p class="ml-1">Street Address</p>
             </div>
             <div class="form-group">
-                <label for="inputAddress2"></label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                <label for="inputAddress2 validationTooltip02"></label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="" id="validationTooltip02" required>
                 <p class="ml-1">Street Address Line 2</p>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity"></label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="validationTooltip03 inputCity" required>
                     <p class="ml-1">City</p>
-
+                    <div class="invalid-tooltip">
+                        Please provide a valid city.
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputState"></label>
@@ -191,32 +197,41 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="inputState"></label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <label for="inputState validationTooltip05"></label>
+                    <input type="text" class="form-control" id="validationTooltip05 inputCity" required>
                     <p class="ml-1">Postal/Zip Code</p>
+                    <div class="invalid-tooltip">
+                        Please provide a valid zip.
+                    </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">  <h6>Student E-mail</h6></label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="ex:myname@example.com">
+                    <label for="inputEmail4 validationTooltipUsername">  <h6>Student E-mail</h6></label>
+                    <input type="email" class="form-control" id="inputEmail4 validationTooltipUsername" placeholder="ex:myname@example.com" aria-describedby="validationTooltipUsernamePrepend" required>
                     <p class="ml-1">example@example.com</p>
+                    <div class="invalid-tooltip">
+                        Please choose a unique and valid username.
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">  <h6>Mobile Number</h6></label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="(000)000-0000">
+                    <input type="text" name="num" data-validation="number" data-validation-allowing="negative,number" input name="color" data-validation="number" datavalidation-ignore="$" required="required" class="form-control" id="phone_no" maxlength="6" pattern="\d*"
+                        placeholder="(000)000-0000">
 
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">  <h6>Phone Number</h6></label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="(000)000-0000">
+                    <input type="text" name="num" data-validation="number" data-validation-allowing="negative,number" input name="color" data-validation="number" datavalidation-ignore="$" required="required" class="form-control" id="phone_no" maxlength="6" pattern="\d*"
+                        placeholder="(000)000-0000">
 
                 </div>
                 <div class="form-group col-md-6">
                     <label for=" inputEmail4 ">  <h6>Work Number</h6></label>
-                    <input type="email " class="form-control " id="inputEmail4 " placeholder="(000)000-0000 ">
+                    <input type="text" name="num" data-validation="number" data-validation-allowing="negative,number" input name="color" data-validation="number" datavalidation-ignore="$" required="required" class="form-control" id="phone_no" maxlength="6" pattern="\d*"
+                        placeholder="(000)000-0000 ">
 
                 </div>
             </div>
@@ -231,12 +246,15 @@
             <div class="form-row ">
                 <div class="form-group col-md-6">
                     <label for="inputState"><h6>Courses</h6></label>
-                    <select id="inputState" class="form-control">
+                    <select class="form-control" id="validationCustom05 inputState" required>
       <option selected>Please Select</option>
       <option>Science</option>
       <option>ARTS</option>
       <option>Computer</option>
     </select>
+                    <div class="invalid-feedback">
+                        Please select a valid Course.
+                    </div>
                 </div>
             </div>
 
@@ -244,8 +262,9 @@
                 <label for="exampleFormControlTextarea1"><h6>Additional Comments</h6></label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
-            <button type="submit " class="btn btn-success mt-4 ">Submit Application</button>
-            <button type="submit " class="btn btn-success mt-4" style="margin-left: 27rem; ">Clear Fields</button>
+
+            <button type="submit" value="SUBMIT" class="btn btn-success mt-4 ">Submit Application</button>
+            <button type="submit" value="SUBMIT" class="btn btn-success mt-4" style="margin-left: 27rem; " onclick="newFunction()">Clear Fields</button>
         </form>
     </div>
 
@@ -254,6 +273,38 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        $('.alphaonly').bind('keyup blur', function() {
+            var node = $(this);
+            node.val(node.val().replace(/[^a-z ]/g, ''));
+        });
+
+        (function() {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+        function newFunction() {
+            document.getElementById("newForm").reset();
+        }
+    </script>
+
 </body>
 
 </html>
